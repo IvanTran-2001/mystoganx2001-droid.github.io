@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Warehouse Automation System | Ivan Tran</title>
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -56,14 +55,20 @@
       border-radius: 8px;
       border: 1px solid #ddd;
     }
+
+    pre {
+      background-color: #f1f1f1;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
   </style>
 </head>
-
 <body>
 
 <header>
-  <h1>Warehouse Automation System</h1>
-  <p>VBA / Automation / WMS Improvement</p>
+  <h1>Improving WMS Layout</h1>
+  <p>WMS Improvement / SQL Understanding</p>
 </header>
 
 <div class="project-container">
@@ -104,11 +109,32 @@
     <li>Enabled data-driven decision-making for warehouse management.</li>
   </ul>
 
-  <h2>Consultant Notes (Sample Report)</h2>
+  <h2>Consultant Notes (Raw Submission)</h2>
+  <p>The notes below show the technical communication I sent to the WMS company:</p>
+  <pre>
+    For “Replen Plan Report - Orders_V2 (Bin Filter)” Report
+    After finding every location entry starting with a certain character(s), it should then filter out all entries with SUM of (under “BulkBinCodes”) locations STARTING WITH SUP and TABLE equal or more than the ReplenQuantity value.
+    This should be done by creating a new column called “replenResidual” 
+    
+    <h2>Consultant Notes (Sample Report)</h2>
+    <iframe src="report.pdf"></iframe>
+  
+    <a href="../index.html" class="btn">Home</a>
+  </pre>
+
+  <h2>Consultant Notes (Polished / Portfolio View)</h2>
+  <p>This is a professional summary of my work improving the Replenishment Plan Report:</p>
+  <ul>
+    <li>Created a derived column <strong>ReplenResidual</strong> to determine which entries require replenishment.</li>
+    <li>Entries with <strong>ReplenResidual ≤ 0</strong> are automatically hidden; positive numbers are highlighted.</li>
+    <li>Report updates dynamically with inventory changes, including multiple TABLE and SUP locations per item.</li>
+    <li>Resulted in reduced operational errors, faster onboarding, and improved data-driven decision-making.</li>
+  </ul>
+
+  <h2>Sample Report (PDF)</h2>
   <iframe src="report.pdf"></iframe>
 
   <a href="../index.html" class="btn">Home</a>
-
 </div>
 
 </body>

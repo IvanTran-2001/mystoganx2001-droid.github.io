@@ -95,7 +95,7 @@
     <li>Data Analysis</li>
     <li>Process Improvement</li>
     <li>Technical Communication</li>
-    <li>Problem Solving</li>
+    <li>Problem Solving and Ideas</li>
     <li>Logistics & Warehouse Operations</li>
   </ul>
 
@@ -107,33 +107,35 @@
     <li>Prevented team collisions where multiple staff grabbed the same inventory.</li>
     <li>Improved confidence in inventory accuracy through instant refresh validation.</li>
     <li>Enabled data-driven decision-making for warehouse management.</li>
+    <li>People using Inventory Computer can now outspeed/manage 2 fork lifters (before 1 fork lifter outspeed 1 computer)
+      or a forklifter can simply do the computer work themselves </li>
   </ul>
+
+  <h2><strong>Thinking, Problem-Solving Process & story</strong></h2>
+  <p>
+    The big problem was the diffuclties of managing 3 different tables at once:
+    1: table used to check every and each pallete if an item/s was needed, 2: to confirm 
+    if items were collected and 3: every location of every customer items of the day. 
+    This will lead to human error, even below 99% is such a huge margin of error. 
+    1 fault can lead to massive delay especially on busy days
+    where space on the floor is being/needed to be taken up to open other space, and just missing an item means we
+    may have to open one space up to get an item which takes a long period of time.
+
+    So as I was doing my job at the warehouse, I was thinking of a solution and pitched it
+    to my boss which she immediately put me on a call with the wms company managing their system.
+    A few days later, wms developer and I developed a new SINGLE table capable of doing everything while
+    also being much simpler to utilize and speed up the process. There were a lot of variables columns combined, while also
+    excluding a lot of unecessary data clogging up the screen. I had to identify everything variable, highlight all important
+    
+
+  </p>
 
   <h2>Consultant Notes (Raw Submission)</h2>
   <p>The notes below show the technical communication I sent to the WMS company:</p>
-  <pre>
-    For “Replen Plan Report - Orders_V2 (Bin Filter)” Report
-    After finding every location entry starting with a certain character(s), 
-    it should then filter out all entries with SUM of (under “BulkBinCodes”) locations 
-    STARTING WITH SUP and TABLE equal or more than the ReplenQuantity value.
-    This should be done by creating a new column called “replenResidual” 
-  </pre>
-  <h2>Consultant Notes (Sample Report)</h2>
     <iframe src="report.pdf"></iframe>
-
-  <h2>Consultant Notes (Polished / Portfolio View)</h2>
-  <p>This is a professional summary of my work improving the Replenishment Plan Report:</p>
-  <ul>
-    <li>Created a derived column <strong>ReplenResidual</strong> to determine which entries require replenishment.</li>
-    <li>Entries with <strong>ReplenResidual ≤ 0</strong> are automatically hidden; positive numbers are highlighted.</li>
-    <li>Report updates dynamically with inventory changes, including multiple TABLE and SUP locations per item.</li>
-    <li>Resulted in reduced operational errors, faster onboarding, and improved data-driven decision-making.</li>
-  </ul>
-
-  <h2>Sample Report (PDF)</h2>
-  <iframe src="report.pdf"></iframe>
-
-  <a href="../index.html" class="btn">Home</a>
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="../index.html" class="btn">Home</a>
+    </div>
 </div>
 
 </body>
